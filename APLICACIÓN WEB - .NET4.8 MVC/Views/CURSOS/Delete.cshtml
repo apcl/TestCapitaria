@@ -1,0 +1,40 @@
+﻿@model Colegio_Capitaria.Models.CURSOS
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Estas seguro de eliminar este curso?</h3>
+<div>
+    <h4>CURSOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            COLEGIO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COLEGIOS.NOMBRE)
+        </dd>
+
+        <dt>
+            CURSO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPCION)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,50 @@
+﻿@model Colegio_Capitaria.Models.EVALUACIONES
+
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>EVALUACIONES</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            NOMBRE ALUMNO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALUMNOS.NOMBRE)
+        </dd>
+        
+        <dt>
+            CURSO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRUEBAS.CURSOS.DESCRIPCION)
+        </dd>
+
+        <dt>
+            PRUEBA
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRUEBAS.DESCRIPCION)
+        </dd>
+
+        <dt>
+            NOTA
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOTA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID_EVALUACION }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

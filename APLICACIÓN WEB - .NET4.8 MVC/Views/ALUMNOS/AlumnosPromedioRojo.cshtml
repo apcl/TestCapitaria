@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Colegio_Capitaria.Models.ALUMNOS_PROMEDIO_ROJO>
+
+@{
+    ViewBag.Title = "AlumnosPromediosRojos";
+}
+
+<h2>Alumnos con Promedios Rojos</h2>
+<p>Filtar a todos los alumnos con más de un ramo con promedio rojo.</p>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CURSOS_CON_PROMEDIO_ROJO)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOMBRE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CURSOS_CON_PROMEDIO_ROJO)
+            </td>
+        </tr>
+    }
+
+</table>

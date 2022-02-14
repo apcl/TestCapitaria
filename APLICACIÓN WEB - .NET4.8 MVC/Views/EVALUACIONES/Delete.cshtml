@@ -1,0 +1,56 @@
+﻿@model Colegio_Capitaria.Models.EVALUACIONES
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Estas seguro de eliminar esta nota?</h3>
+<div>
+    <h4>NOTA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            NOMBRE ALUMNO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALUMNOS.NOMBRE)
+        </dd>
+
+        <dt>
+            CURSO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRUEBAS.CURSOS.DESCRIPCION)
+        </dd>
+
+        <dt>
+            PRUEBA
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRUEBAS.DESCRIPCION)
+        </dd>
+
+        <dt>
+            NOTA
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOTA)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>

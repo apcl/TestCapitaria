@@ -1,0 +1,34 @@
+﻿@model Colegio_Capitaria.Models.CURSOS
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>CURSOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            COLEGIO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COLEGIOS.NOMBRE)
+        </dd>
+
+        <dt>
+            CURSO
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPCION)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID_CURSO }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

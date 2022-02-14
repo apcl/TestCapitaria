@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Colegio_Capitaria.Models.PROMEDIOS_ALUMNOS>
+
+@{
+    ViewBag.Title = "PromediosAlumnos";
+}
+
+<h2>Promedios Alumnos</h2>
+<p>Listar a los alumnos junto a su promedio de notas.</p>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROMEDIO)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PROMEDIO)
+        </td>
+    </tr>
+    }
+
+</table>

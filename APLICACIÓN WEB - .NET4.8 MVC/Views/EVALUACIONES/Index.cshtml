@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Colegio_Capitaria.Models.EVALUACIONES>
+
+@{
+    ViewBag.Title = "Notas";
+}
+
+<h2>Notas</h2>
+
+<p>
+    @Html.ActionLink("Crear nueva", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            NOMBRE ALUMNO
+        </th>
+        <th>
+            CURSO
+        </th>
+        <th>
+            ASUNTO DE PRUEBA
+        </th>
+        <th>
+            NOTA
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ALUMNOS.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRUEBAS.CURSOS.DESCRIPCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRUEBAS.DESCRIPCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOTA)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.ID_EVALUACION }) |
+            @Html.ActionLink("Detalle", "Details", new { id = item.ID_EVALUACION }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.ID_EVALUACION })
+        </td>
+    </tr>
+}
+
+</table>
