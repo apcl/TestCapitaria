@@ -30,4 +30,4 @@ Es necesario copiar el contenido de la carpeta APLICACIÓN WEB - .NET4.8 MVC a l
 Una vez realizadas estas acciones, se está en condición de probar la aplicación.
 
 ### Frontend
-...continuar
+Para chequear este apartado, es necesario abrir el archivo index.html ubicado en la carpeta Frontend con algún navegador web.
