@@ -1,0 +1,42 @@
+.table{
+    display: table;
+    width: 960px;
+}
+
+.cabecera{
+    font-weight: bold;
+    text-align: center;
+    display: table-row;
+}
+
+.celda{
+    border-radius: 5px;
+    border: solid;
+    border-width: 0.5px;
+    display: table-cell;
+}
+
+.hora{
+    border-radius: 5px;
+    background-color: lightgrey;
+    display: table-cell;
+    border: solid;
+    border-width: 0.5px;;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.dia{
+    border-radius: 5px;
+    background-color: #dbefff;
+    display: table-cell;
+    border: solid;
+    border-width: 0.5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: rgba(33, 33, 174, 0.994);
+}
+
+.fila{
+    display: table-row;
+}
